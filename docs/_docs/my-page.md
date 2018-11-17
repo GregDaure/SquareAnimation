@@ -1,5 +1,7 @@
 ---
 title: My Page
-category:
+category: Methods
 order: 1
 ---
+
+# This is a simple header
