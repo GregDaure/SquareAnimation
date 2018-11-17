@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp" android:layout_height="150dp"
+    android:id="@+id/root">
+    <View
+        android:id="@+id/square1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/defaultSquare1"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <View
+        android:id="@+id/square2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@id/square1"
+        android:layout_toEndOf="@id/square1"
+        android:background="@color/defaultSquare2"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="5dp"/>
+
+    <View
+        android:id="@+id/square3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/square1"
+        android:background="@color/defaultSquare3"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"/>
+
+    <View
+        android:id="@+id/square4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@id/square3"
+        android:layout_toEndOf="@id/square3"
+        android:layout_below="@id/square2"
+        android:background="@color/defaultSquare4"/>
+
+</RelativeLayout>

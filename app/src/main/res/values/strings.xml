@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SquareAnimation</string>
+    <string-array name="animationtype">
+        <item>LINEAR</item>
+        <item>SEMI_LINEAR</item>
+        <item>ROTATION</item>
+        <item>SEMI_ROTATION</item>
+        <item>BOUNCE</item>
+        <item>TRANSLATION</item>
+    </string-array>
+
+    <string-array name="interpolator">
+        <item>AccelerateDecelerate</item>
+        <item>Accelerate</item>
+        <item>Anticipate</item>
+        <item>AnticipateOvershoot</item>
+        <item>Bounce</item>
+        <item>Decelerate</item>
+        <item>Linear</item>
+        <item>Overshoot</item>
+    </string-array>
+</resources>
