@@ -26,6 +26,8 @@ timezone: Etc/UTC
 
 permalink: pretty
 
+plugins_dir: ./_plugins
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
