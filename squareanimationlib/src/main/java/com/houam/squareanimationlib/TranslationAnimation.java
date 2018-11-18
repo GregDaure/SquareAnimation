@@ -9,7 +9,6 @@ import android.widget.RelativeLayout;
 
 public class TranslationAnimation extends Animation {
 
-    private int value;
 
     @Override
     protected void createAnimatorSets(View[] views) {
@@ -20,15 +19,11 @@ public class TranslationAnimation extends Animation {
     }
 
     private AnimatorSet createTranslationAnimation(View v){
-        if (v == getViews()[0]){
-            RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) v.getLayoutParams();
-            value = v.getWidth() + lp.rightMargin;
-        }
 
-        ObjectAnimator animatorX1 = ObjectAnimator.ofFloat(v, "translationX", value);
-        ObjectAnimator animatorX2 = ObjectAnimator.ofFloat(v, "translationX", -value);
-        ObjectAnimator animatorY1 = ObjectAnimator.ofFloat(v, "translationY", -value);
-        ObjectAnimator animatorY2 = ObjectAnimator.ofFloat(v, "translationY", value);
+        ObjectAnimator animatorX1 = ObjectAnimator.ofFloat(v, "translationX", getSpacement());
+        ObjectAnimator animatorX2 = ObjectAnimator.ofFloat(v, "translationX", -getSpacement());
+        ObjectAnimator animatorY1 = ObjectAnimator.ofFloat(v, "translationY", -getSpacement());
+        ObjectAnimator animatorY2 = ObjectAnimator.ofFloat(v, "translationY", getSpacement());
 
         ObjectAnimator animatorDefaultX = ObjectAnimator.ofFloat(v, "translationX", 0);
         ObjectAnimator animatorDefaultY = ObjectAnimator.ofFloat(v, "translationY", 0);
@@ -59,6 +54,11 @@ public class TranslationAnimation extends Animation {
         }
 
         return set;
+    }
+
+    @Override
+    public float getSpacement() {
+        return getViews()[3].getX() - getViews()[0].getX();
     }
 
     @Override

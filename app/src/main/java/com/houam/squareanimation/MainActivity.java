@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         });
         int colors[] = {0xFF8C57CA,0xFF89CCBA,0xFFFFCF35,0xFF4E4E4C};
         loading.setColors(colors);
-        loading.setCustomAnimation(new MyCustomAnimation());
 
         findViewById(R.id.start).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 String animationType = animationTypeSpinner.getSelectedItem().toString();
                 String interpolator = "android.view.animation."+interpolatorSpinner.getSelectedItem().toString()+"Interpolator";
                 loading.setType(AnimationType.valueOf(animationType));
-                loading.setType(AnimationType.CUSTOM);
                 try {
                     loading.setInterpolator((TimeInterpolator) Class.forName(interpolator).newInstance());
                 } catch (InstantiationException e) {
